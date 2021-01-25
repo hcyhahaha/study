@@ -1,0 +1,68 @@
+@import '~antd/dist/antd.css';
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* src/views/Login/signIn/signIn.jsx */
+.login-form-signIn {
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+#normal_login .login-form-forgot {
+  float: right;
+}
+
+#normal_login .ant-col-rtl .login-form-forgot {
+  float: left;
+}
+
+#normal_login .login-form-button {
+  width: 100%;
+}
+
+/* 验证码的样式 */
+#normal_login .verifBox {
+  width: 300px;
+  height: 32px;
+  margin-bottom: 24px;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+
+#normal_login .verifBox .verif-input input {
+  /* border-right: 1px solid transparent; */
+  width: 200px;
+}
+
+#normal_login .verif-input>.ant-form-item {
+  margin-bottom: 0;
+}
+
+#normal_login .verifBox .verif-svg {
+  /* border: 1px solid gray; */
+  cursor: pointer;
+    /* transform: translateY(-3px); */
+}
+
+/* src/views/pages/page1.jsx */
+.page1Table {
+  width: 400px;
+}
+
+/* 表格头样式 */
+.page1Table .ant-table-thead tr>th {
+  font-weight: bold;
+}
+
+/* 添加表格选中行样式 */
+.ant-table-tbody>.clickRowStyl {
+  background-color: #00b4ed
+}
+
+.ant-table-tbody>tr.clickRowStyl:hover>td {
+  background-color: #00b4ed
+}

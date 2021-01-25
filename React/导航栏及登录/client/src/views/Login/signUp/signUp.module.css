@@ -1,0 +1,8 @@
+.verifBox {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+.loginFormButton {
+    width: 100%;
+}
