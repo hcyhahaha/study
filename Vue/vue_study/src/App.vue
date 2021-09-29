@@ -16,6 +16,9 @@
         <a-button type="primary" @click="toJump('/page1')"> Page1 </a-button>
         <a-button type="primary" @click="toJump('/page2')"> Page2 </a-button>
         <a-button type="primary" @click="toJump('/page3')"> Page3 </a-button>
+        <a-button type="primary" @click="toJump('/page4')">
+          vue组件通信
+        </a-button>
         <a-button type="primary" @click="toJump('/page2/edt')"> Edt </a-button>
         <a-button type="primary" @click="toJump('/page2/sports')">
           Sports
@@ -23,7 +26,7 @@
       </div>
       <div class="study_button_styBox button-box">
         <a-button type="primary" @click="toJump('/vuex')"> vuex </a-button>
-        <a-button type="primary"> 按钮 </a-button>
+        <a-button type="primary" @click="toJump('/vModel')"> v-model </a-button>
         <a-button type="primary"> 按钮 </a-button>
         <a-button type="primary"> 按钮 </a-button>
       </div>

@@ -1,3 +1,4 @@
+// 子组件
 <template>
   <div>
     <div>

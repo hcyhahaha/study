@@ -11,6 +11,9 @@ Vue.use(Antd);
 Vue.use(less)
 Vue.config.productionTip = false
 
+// 中央事件总线
+export const Event = new Vue()
+
 
 new Vue({
   store,

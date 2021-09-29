@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object.defineProperty()</title>
+</head>
+
+<body>
+    <h1>极简版的双向绑定</h1>
+    <input type="text" id="txt_id">
+    <p id="p_id"></p>
+</body>
+<script>
+    /*
+    它有三个参数：
+          第一个参数是`属性所在的对象`；
+          第二个参数是`你要操作的属性`；
+          第三个参数是`被操作的属性的特性`，
+                第三个参数的格式是对象，{},一般是两个，get（读取属性时触发），set（写入属性时触发）
+    */
+    let _xxObj = {}
+    Object.defineProperty(_xxObj, "xx_val", {
+        get: function () {
+            console.log("get-----------");
+            return "返回值"
+        },
+        set: function (per) {
+            console.log("set------传入的per==>",per);
+            // 把这个得到的值写入到input标签中
+            document.getElementById("txt_id").value = per
+            // 把这个得到的值写入到p标签中
+            document.getElementById("p_id").innerHTML = per
+        }
+    })
+
+    // 事件监听
+    // 光标、焦点在输入框里，监听keyup事件
+    document.addEventListener("keyup", function (e) {
+        // console.log("keyup事件监听---e.target.value==>", e.target.value);
+        // 写入时触发，set
+        _xxObj.xx_val = e.target.value
+    })
+
+    // 写入时触发，set
+    // _xxObj.xx_val = 123
+    // 读取时触发，get
+    // console.log("读取时触发，get--->", _xxObj.xx_val);
+</script>
+
+</html>

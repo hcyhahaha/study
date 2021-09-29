@@ -11,8 +11,10 @@ import page2 from './page/page2.vue';
 import edt from './page/edt.vue';
 import sports from './page/sports.vue';
 import page3 from './page/page3.vue';
+import page4 from './page/page4.vue';
 // import UserHome from './page/UserHome.vue';
 import myvuex from '@/views/vuex/fu.vue';
+import MyVmodel from '@/views/v_model/myVmodel.vue';
 
 //定义routes路由的集合，数组类型
 const routes = [
@@ -28,7 +30,9 @@ const routes = [
         ]
     },
     { path: '/page3', component: page3 },
+    { path: '/page4', component: page4 },
     { path: '/vuex', component: myvuex },
+    { path: '/vModel', component: MyVmodel },
     //可以配置重定向
     { path: '', redirect: "page1" },
     //或者重新写个路径为空的路由
